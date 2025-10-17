@@ -1,0 +1,293 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.articleHeader {
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #e1e5e9;
+  padding-bottom: 2rem;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumbLink {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  color: #5a67d8;
+}
+
+.breadcrumbSeparator {
+  color: #999;
+}
+
+.breadcrumbCurrent {
+  color: #333;
+  font-weight: 500;
+}
+
+.articleTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.articleMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.author {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.articleTags {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.category {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.readTime {
+  color: #666;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f0f0f0;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.articleContent {
+  line-height: 1.8;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.paragraph {
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.listItem::before {
+  content: "•";
+  color: #667eea;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.articleFooter {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #e1e5e9;
+  text-align: center;
+}
+
+.backButton {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.backButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  color: white;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.notFound {
+  text-align: center;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.notFound h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.notFound p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.error {
+  text-align: center;
+  color: #ff6b6b;
+  padding: 4rem 2rem;
+}
+
+.error h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.error p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.retryButton {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+}
+
+.retryButton:hover {
+  background: #ff5252;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .article {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .articleTitle {
+    font-size: 2rem;
+  }
+
+  .articleMeta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .articleTags {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .articleContent {
+    font-size: 1rem;
+  }
+
+  .subheading {
+    font-size: 1.3rem;
+  }
+}
